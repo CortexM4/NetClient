@@ -1,0 +1,7 @@
+D:\Project\CubieBoard\NetClient\NetClient\bin\Debug\NetClient.dll
+D:\Project\CubieBoard\NetClient\NetClient\bin\Debug\NetClient.pdb
+D:\Project\CubieBoard\NetClient\NetClient\bin\Debug\Google.ProtocolBuffers.dll
+D:\Project\CubieBoard\NetClient\NetClient\bin\Debug\Google.ProtocolBuffers.pdb
+D:\Project\CubieBoard\NetClient\NetClient\bin\Debug\Google.ProtocolBuffers.xml
+D:\Project\CubieBoard\NetClient\NetClient\obj\Debug\NetClient.dll
+D:\Project\CubieBoard\NetClient\NetClient\obj\Debug\NetClient.pdb

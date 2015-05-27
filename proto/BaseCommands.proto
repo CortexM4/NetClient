@@ -1,0 +1,34 @@
+package TestNetClient;
+
+message BaseCommands {
+	enum Type { DEVICE_STATE = 1; STREAM_SOUND = 2; FAIRY_TALE = 3; VIDEO_STREAM = 4; }
+	required Type type = 1;
+	optional DeviceState deviceState = 2;
+	optional StreamSound streamSound = 3;
+	optional FairyTale fairyTale = 4;
+	optional VideoStream videoStream = 5;
+}
+
+message DeviceState {
+	enum Direction { READ = 1; WRITE=2; }		// Устанавливает направление пакета записать/считать значения
+	required Direction type = 1;
+	optional float sound = 2;
+	optional bool power = 3;
+}
+
+message StreamSound {
+	optional int32 port = 1;
+	required bool reload = 2;
+}
+
+message FairyTale {
+	enum Type { PLAY = 1; GET_POSITION = 2; SET_POSITION = 3; PAUSE = 4; UNPAUSE = 5; }
+	required Type cmd = 1;
+	required string name = 2;
+	optional int64 position = 3;
+	optional int64 maxPosition = 4;
+}
+
+message VideoStream {
+	required bool play = 1;
+}

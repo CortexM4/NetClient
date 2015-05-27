@@ -1,0 +1,5 @@
+D:\Project\CubieBoard\protobuf-csharp-port\tools>ProtoGen.exe ..\Cubie\BaseCommands.proto --proto_path=..\Cubie
+
+Почему то создает исходник в директорию, где находится protoget
+
+!!! Незабыть сменить namespace. Убрать java options (Хотя можно разобраться с параметрами, в доке сказанно, что они не конфликтуют)
