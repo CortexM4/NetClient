@@ -13,14 +13,18 @@ namespace NetClient
 
         private int port;
         private IPAddress ipAddress;
-        private string host = "localhost";
+        private static string DEFAULT_HOST = "localhost";
         private static int DEFAULT_PORT = 4444;
 
         public NetworkConnection()
-            : this(DEFAULT_PORT)
+            : this(DEFAULT_PORT, DEFAULT_HOST)
         { }
 
         public NetworkConnection(int port)
+            : this(port, DEFAULT_HOST)
+        { }
+
+        public NetworkConnection(int port, string host)
         {
             IPHostEntry ipHostInfo = Dns.GetHostEntry(host);
             ipAddress = ipHostInfo.AddressList[1];
@@ -30,7 +34,7 @@ namespace NetClient
             {
                 client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 throw;
             }
